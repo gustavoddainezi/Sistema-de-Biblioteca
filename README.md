@@ -2,8 +2,8 @@
 ### Centro Paula Souza - Fatec Ferraz - Curso de Análise e Desenvolvimento de Sistemas
 ### Disciplina – Programação Web – Prof. Edson Saraiva de Almeida
 ### Grupo 6
-- Gustavo Damaceno Dainezi
 - Gabriel Dias Ramos Lima
+- Gustavo Damaceno Dainezi
 - Heracles Ferreira Dias Coelho
 ### Objetivo
 Este projeto tem como objetivo implementar uma aplicação de empréstimo e devolução de livros, para se familiarizar com a
