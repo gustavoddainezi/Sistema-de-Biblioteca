@@ -19,7 +19,6 @@
 	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
 	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
 	crossorigin="anonymous">
-
 </head>
 <body>
 	<header th:replace="fragments/header :: cabecalho">
@@ -27,7 +26,6 @@
 	</header>
 	<div class="container my-5">
 		<br />
-
 		<h3>Cadastrar Livro</h3>
 		<div class="card">
 			<div class="card-body">
@@ -64,14 +62,11 @@
 								<input type="submit" class="btn btn-primary"
 									value="Cadastrar Livro"> <a type="submit"
 									class="btn btn-primary" th:href="@{/livros/consultar}">
-									Lista de Livros</a> 
-									<!--  <input type="button" class="btn btn-primary"
+									Lista de Livros</a> <input type="button" class="btn btn-primary"
 									onclick="consulta()" value="Alert inline"> <input
 									type="button" class="btn btn-primary" th:onclick="showAlert()"
-									value="Alert api">-->
-
+									value="Alert api">
 							</div>
-
 						</div>
 					</form>
 				</div>

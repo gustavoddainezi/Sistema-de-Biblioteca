@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Cadastrar Usuario</title>
+<script type="text/javascript">
+	function consulta() {
+		window.open("consulta");
+	}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+	crossorigin="anonymous">
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+	integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+	crossorigin="anonymous">
+</head>
+<body>
+	<header th:replace="fragments/header :: cabecalho">
+		<div>header</div>
+	</header>
+	<div class="container my-5">
+		<br />
+
+		<h3>Cadastrar Usuario</h3>
+		<div class="card">
+			<div class="card-body">
+				<div class="col-md-8">
+					<form action="#" th:action="@{/usuarios/save}"
+						th:object="${usuario}" method="post">
+						<div class="row">
+							<div class="form-group col-md-4">
+								<label for="ra" class="col-form-label">RA</label> <input
+									type="text" th:field="*{ra}" class="form-control" id="ra"
+									placeholder="RA"> <span
+									th:if="${#fields.hasErrors('ra')}" th:errors="*{ra}"
+									class="textdanger"> </span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-8">
+								<label for="nome" class="col-form-label">Nome</label> <input
+									type="text" th:field="*{nome}" class="form-control" id="nome"
+									placeholder="Nome"> <span
+									th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"
+									class="text-danger"> </span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-8">
+								<label for="email" class="col-form-label">E-mail</label> <input
+									type="text" th:field="*{email}" class="form-control" id="email"
+									placeholder="Email"> <span
+									th:if="${#fields.hasErrors('email')}" th:errors="*{email}"
+									class="text-danger"></span>
+							</div>
+						</div>
+						<div class="row">
+							<div class="form-group col-md-8">
+								<label for="cep" class="col-form-label">CEP</label> <input
+									type="text" th:field="*{cep}" class="form-control" id="cep"
+									placeholder="Cep"> <span
+									th:if="${#fields.hasErrors('cep')}" th:errors="*{cep}"
+									class="text-danger"></span>
+							</div>
+							<div class="form-group col-md-8">
+								<input type="submit" class="btn btn-primary"
+									value="Cadastrar Usuario"> <input type="button"
+									class="btn btn-primary" value="Consultar Usuario"
+									onclick="consulta();">
+							</div>
+
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

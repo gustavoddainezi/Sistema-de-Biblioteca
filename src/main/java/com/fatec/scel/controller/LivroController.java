@@ -15,7 +15,7 @@ import com.fatec.scel.model.Livro;
 import com.fatec.scel.servico.LivroServico;
 
 @Controller
-@RequestMapping(path = "/livros")
+@RequestMapping("/livros")
 public class LivroController {
 	Logger logger = LogManager.getLogger(LivroController.class);
 	@Autowired
