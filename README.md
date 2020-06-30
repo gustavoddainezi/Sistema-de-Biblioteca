@@ -29,7 +29,7 @@ realizada pelo grupo e uma ata é publicada no Teams.
 - REQ02 - Consultar livro
   - Como - Funcionário da biblioteca
   - Quero - Consultar Livro
-  - De maneira que - Seja possível realizar a visualização um livro da base de dados
+  - De maneira que - Seja possível realizar a visualização de livros da base de dados
 - REQ02CT01 - Consulta de livro com sucesso
   - Desde que: o livro esteja cadastrado.
   - Quando: o usuário digita uma informação para encontra-lo, podendo ser "ISBN", "Título" ou "Autor" e confirma operação.
@@ -63,7 +63,7 @@ realizada pelo grupo e uma ata é publicada no Teams.
   - Quando: o usuário digita uma informação para encontra-lo, podendo ser "ISBN", "Título" ou "Autor" e confirma operação.
   - Então: o sistema valida os dados. Pergunta se o usuário realmente deseja excluir, espera a resposta do usuário. Caso a resposta for sim mostra na tela uma mensagem informando que a exclusão não foi realizada porque há exemplares emprestados, caso a resposta for não volta para tela anterior.  
 - REQ05 – Cadastrar usuário
-  - Como – atendente da biblioteca
+  - Como – Funcionário da biblioteca
   - Eu quero – cadastrar um usuário
   - De modo que – seja possível realizar o empréstimo de um livro.
 - REQ05CT01 – Cadastro de usuário com sucesso
@@ -73,7 +73,39 @@ realizada pelo grupo e uma ata é publicada no Teams.
 - REQ05CT02 – Cadastro de usuário invalido
   - Dado (pré-requisito) – que o RA do usuário está cadastrado.
   - Quando (descrição das ações que devem ser realizadas) – o atendente digita as informações do usuário e confirma a operação.
-  - Então (resultado esperado) – o sistema retorna uma mensagem informando que o usuário já está cadastrado
+  - Então (resultado esperado) – o sistema retorna uma mensagem informando que o usuário já está cadastrado  
+- REQ06 - Consultar usuário
+  - Como - Funcionário da biblioteca
+  - Quero - Consultar um usuário
+  - De maneira que - Seja possível realizar a visualização de usuários da base de dados
+- REQ06CT01 - Consulta de usuário com sucesso
+  - Desde que: o usuário esteja cadastrado.
+  - Quando: o usuário acessa a tela de consulta de usuários.
+  - Então: o sistema valida os dados. E mostra na tela os usuários respectivos à consulta.
+- REQ06CT02 - Cenário 2: Consulta de usuário inexistente
+  - Dado que: o usuário não esteja cadastrado.
+  - Quando: o usuário digita uma informação  para encontra-lo e confirma operação.
+  - Então: o sistema valida os dados. E uma mensagem informando que o usuário consultado não está cadastrado é mostrada. 
+- REQ07 - Alterar usuário
+  - Como - Funcionário da biblioteca
+  - Quero - Alterar Usuário
+  - De maneira que - Seja possível realizar a alteração dos dados do usuário na base de dados
+- REQ07CT01 - Alteração de usuário com sucesso
+  - Desde que: o usuário esteja cadastrado
+  - Quando: o usuário digita uma informação para alterar o dado na base de dados e confirma operação.
+  - Então: o sistema valida os dados. E mostra na tela uma mensagem informando que a alteração foi realizada.  
+- REQ08 - Excluir usuário
+  - Como - Funcionário da biblioteca
+  - Quero - Excluir Usuário
+  - De maneira que - Seja possível realizar a exclusão de um usuário da base de dados
+- REQ08CT01 - Exclusão de usuário com sucesso
+  - Desde que: o usuário esteja cadastrado
+  - Quando: o usuário seleciona o usuário desejado e confirma sua exclusão.
+  - Então: o sistema valida os dados. Pergunta se o usuário realmente deseja excluir, espera a resposta do usuário. Caso a resposta for sim mostra na tela uma mensagem informando que a exclusão foi realizada, caso a resposta for não volta para tela anterior.
+- REQ08CT02 -  Exclusão de usuário sem êxito
+  - Dado que: o usuário não seja excluído
+  - Quando: o usuário seleciona o usuário desejado e confirma sua exclusão.
+  - Então: o sistema valida os dados. Pergunta se o usuário realmente deseja excluir, espera a resposta do usuário. Caso a resposta for sim mostra na tela uma mensagem informando que a exclusão não foi realizada, caso a resposta for não volta para tela anterior.  
 ### 1. Planejamento da Sprint
 Durante a fase de planejamento as funcionalidades nesta interação são selecionadas do backlog do produto.
 ### 2. Estratégia de desenvolvimento.
