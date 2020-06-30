@@ -32,16 +32,12 @@ realizada pelo grupo e uma ata é publicada no Teams.
   - De maneira que - Seja possível realizar a visualização de livros da base de dados
 - REQ02CT01 - Consulta de livro com sucesso
   - Desde que: o livro esteja cadastrado.
-  - Quando: o usuário digita uma informação para encontra-lo, podendo ser "ISBN", "Título" ou "Autor" e confirma operação.
-  - Então: o sistema valida os dados. E mostra na tela os livros respectivos à consulta do usuário.
+  - Quando: o usuário acessa a tela de consulta de livros.
+  - Então: o sistema valida os dados. E mostra na tela os livros.
 - REQ02CT02 - Cenário 2: Consulta de livro inexistente
   - Dado que: o livro não esteja cadastrado.
-  - Quando: o usuário digita uma informação  para encontra-lo, podendo ser "ISBN", "Título" ou "Autor" e confirma operação.
-  - Então: o sistema valida os dados. E uma mensagem informando que o livro consultado não está cadastrado é mostrada.
-- REQ02CT03 - Consulta de livro emprestado
-  - Dado que: o livro já tenha sido emprestado
-  - Quando: o usuário digita uma informação para encontra-lo, podendo ser "ISBN", "Título" ou "Autor" e confirma operação.
-  - Então: o sistema valida os dados. E uma mensagem informando que o livro consultado já está emprestado é mostrada.  
+  - Quando: o usuário acessa a tela de consulta de livros.
+  - Então: o sistema valida os dados. E uma mensagem informando que não há livro cadastrado é mostrada.
 - REQ03 - Alterar livro
   - Como - Funcionário da biblioteca
   - Quero - Alterar Livro
