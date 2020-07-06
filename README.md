@@ -102,6 +102,38 @@ realizada pelo grupo e uma ata é publicada no Teams.
   - Dado que: o usuário não seja excluído
   - Quando: o usuário seleciona o usuário desejado e confirma sua exclusão.
   - Então: o sistema valida os dados. Pergunta se o usuário realmente deseja excluir, espera a resposta do usuário. Caso a resposta for sim mostra na tela uma mensagem informando que a exclusão não foi realizada, caso a resposta for não volta para tela anterior.  
+- REQ09 - Cadastrar empréstimo
+  - Como - Um funcionário da biblioteca. 
+  - Quero - Realizar um empréstimo de livro.
+  - De maneira que - seja possível realizar o empréstimo do livro.
+- REQ09CT01 - Realização do empréstimo concluído
+  - Desde que: o livro e o cliente estejam devidamente cadastrados
+  - Quando: o usuário digita as informações sobre o livro para realizar a consulta e escolhe o livro desejado, consulta e seleciona o cliente e confirma a operação
+  - Então: o sistema valida o empréstimo e insere as informações de data de emissão do livro, data de devolução e status do empréstimo. E uma mensagem confirmando que o empréstimo foi realizado com sucesso é enviada
+- REQ09CT02 - Realização do Empréstimo com livro indisponível
+  - Dado que: o livro escolhido não esteja cadastrado no sistema 
+  - Quando: o usuário escolhe um livro que não esteja registrado
+  - Então: o sistema verifica a disponibilidade E envia uma mensagem de livro indisponível
+- REQ10 - Consultar empréstimo
+  - Como - Funcionário da biblioteca
+  - Quero - Consultar Empréstimo
+  - De maneira que - Seja possível realizar a visualização, exclusão e alteração de um Empréstimo da base de dados
+- REQ10CT01 - Consulta de empréstimo com sucesso
+  - Desde que: o empréstimo esteja cadastrado.
+  - Quando: o usuário digita uma informação para encontra-lo, podendo ser "Nome do Cliente", "Título do Livro" ou "Código do Exemplar", entre outros e confirma operação.
+  - Então: o sistema valida os dados. E mostra na tela os empréstimos respectivos à consulta do usuário.
+- REQ10CT02 - Consulta de empréstimo inexistente
+  - Dado que: o empréstimo não esteja cadastrado.
+  - Quando: o usuário digita uma informação para encontra-lo, podendo ser "Nome do Cliente", "Título do Livro" ou "Código do Exemplar", entre outros e confirma operação.
+  - Então: o sistema valida os dados. E uma mensagem informando que o empréstimo consultado não existe ou está finalizado é mostrada.
+- REQ11 - Registrar devolução
+  - Como - Funcionário da biblioteca
+  - Quero - Registrar devolução
+  - De maneira que - Seja possível realizar que o livro seja emprestado novamente e o usuário possa realizar novos empréstimos
+- REQ11CT01 - Devolução efetuada com sucesso
+  - Desde que: o livro tenha sido devolvido
+  - Quando: o funcionário recebe o livro emprestado pelo usuário e clica na opção indicada.
+  - Então: o sistema valida os dados. E mostra na tela uma mensagem informando que a devolução foi realizada. 
 ### 1. Planejamento da Sprint
 Durante a fase de planejamento as funcionalidades nesta interação são selecionadas do backlog do produto.
 ### 2. Estratégia de desenvolvimento.
